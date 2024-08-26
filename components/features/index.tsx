@@ -18,6 +18,10 @@ import { AnimatedModalDemo } from "../animated-modal-demo"
 import { FileUpload } from "../ui/file-upload"
 import { MeteorsDemo } from "../meteor-card"
 import { Meteors } from "../ui/meteors"
+import { BackgroundBeamsWithCollisionDemo } from "../background-beams-card"
+import { BackgroundBeamsWithCollision } from "../ui/background-beams-with-collision"
+import { ShootingStars } from "../ui/shooting-stars"
+import { StarsBackground } from "../ui/stars-background"
 
 export const Features = () => {
   return (
@@ -62,16 +66,37 @@ export const Features = () => {
               <SkeletonFour />
             </CardSkeletonContainer>
             <CardTitle>Collaborate From Anywhere</CardTitle>
-            <CardDescription>working with</CardDescription>
-          </Card>
-          <Card>
-            <CardSkeletonContainer>
-              <SkeletonFive />
-            </CardSkeletonContainer>
-            <CardTitle>Know your audience</CardTitle>
             <CardDescription>
-              Based on your audience, create funnels and drive more traffic.
+              Seamlessly Collaborate With Our Team and Your Creative Partners,
+              No Matter Where You Are. Share Ideas, Give Feedback, and Track
+              Progress
             </CardDescription>
+          </Card>
+          <Card className="p-0 overflow-visible">
+            <CardSkeletonContainer className="w-full h-full min-h-[20rem]">
+              <BackgroundBeamsWithCollision>
+                <ShootingStars />
+                <StarsBackground />
+                <h2 className="text-2xl relative z-20 md:text-4xl lg:text-4xl font-bold text-center text-black dark:text-white font-sans tracking-tight justify-center items-center">
+                  Lightning Fast{" "}
+                  <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
+                    <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r py-4 from-purple-500 via-violet-500 to-pink-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">
+                      <span>Turnaround</span>
+                    </div>
+                    <div className="relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4">
+                      <span>Turnaround</span>
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <CardDescription className="text-center translate-y-5 text-base">
+                      Need your project done yesterday? We specialize in quick
+                      turnarounds without sacrificing quality, so you can keep
+                      your momentum going and meet your tight deadlines
+                    </CardDescription>
+                  </div>
+                </h2>
+              </BackgroundBeamsWithCollision>
+            </CardSkeletonContainer>
           </Card>
         </div>
       </Container>

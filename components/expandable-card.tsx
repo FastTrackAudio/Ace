@@ -52,7 +52,7 @@ export function ExpandableCardOnClick() {
     {
       title: "Stem Editing",
       description:
-        "Tuned and Time-Aligned Vocals, Edited Multitrack Drums, Tempo Maps, and Final Touch Ups",
+        "Tuned and Time-Aligned Vocals, Edited Multitrack Drums, Tempo Maps, and Touch Ups",
       src: StemEditingGif,
       content: (
         <div>

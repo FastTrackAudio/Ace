@@ -1,18 +1,18 @@
-"use client";
-import { motion, useMotionValueEvent } from "framer-motion";
-import React, { useRef, useState } from "react";
-import { FeatureIconContainer } from "./features/feature-icon-container";
-import { Heading } from "./heading";
-import { Subheading } from "./subheading";
-import { StickyScroll } from "./ui/sticky-scroll";
+"use client"
+import { motion, useMotionValueEvent } from "framer-motion"
+import React, { useRef, useState } from "react"
+import { FeatureIconContainer } from "./features/feature-icon-container"
+import { Heading } from "./heading"
+import { Subheading } from "./subheading"
+import { StickyScroll } from "./ui/sticky-scroll"
 import {
   IconMailForward,
   IconSocial,
   IconTerminal,
   IconTool,
-} from "@tabler/icons-react";
-import { useScroll } from "framer-motion";
-import { BlurImage } from "./blur-image";
+} from "@tabler/icons-react"
+import { useScroll } from "framer-motion"
+import { BlurImage } from "./blur-image"
 
 export const Tools = () => {
   const content = [
@@ -84,35 +84,35 @@ export const Tools = () => {
         </ImageContainer>
       ),
     },
-  ];
-  const ref = useRef<HTMLDivElement>(null);
+  ]
+  const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
-  });
+  })
   const backgrounds = [
     "var(--charcoal)",
     "var(--neutral-900)",
     "var(--gray-900)",
-  ];
-  const index = Math.round(scrollYProgress.get() * (backgrounds.length - 1));
+  ]
+  const index = Math.round(scrollYProgress.get() * (backgrounds.length - 1))
 
-  const [gradient, setGradient] = useState(backgrounds[0]);
+  const [gradient, setGradient] = useState(backgrounds[0])
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const cardsBreakpoints = content.map((_, index) => index / content.length);
+    const cardsBreakpoints = content.map((_, index) => index / content.length)
     const closestBreakpointIndex = cardsBreakpoints.reduce(
       (acc, breakpoint, index) => {
-        const distance = Math.abs(latest - breakpoint);
+        const distance = Math.abs(latest - breakpoint)
         if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
-          return index;
+          return index
         }
-        return acc;
+        return acc
       },
       0
-    );
-    setGradient(backgrounds[closestBreakpointIndex % backgrounds.length]);
-  });
+    )
+    setGradient(backgrounds[closestBreakpointIndex % backgrounds.length])
+  })
   return (
     <motion.div
       animate={{
@@ -128,15 +128,16 @@ export const Tools = () => {
         <FeatureIconContainer className="flex justify-center items-center overflow-hidden">
           <IconTool className="h-6 w-6 text-cyan-500" />
         </FeatureIconContainer>
-        <Heading className="mt-4">Perfect set of tools</Heading>
+        <Heading className="mt-4">Listen To Our Work</Heading>
         <Subheading>
-          Proactiv comes with perfect tools for the perfect jobs out there.
+          Let the Music Speak For Itself, Here Are Some Projects We&apos;ve Been
+          Apart Of
         </Subheading>
       </div>
       <StickyScroll content={content} />
     </motion.div>
-  );
-};
+  )
+}
 
 const ImageContainer = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -145,5 +146,5 @@ const ImageContainer = ({ children }: { children: React.ReactNode }) => {
       <div className="absolute bottom-0 w-full h-px inset-x-0 bg-gradient-to-r from-transparent via-secondary to-transparent" />
       <div className="absolute bottom-0 w-40 mx-auto h-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
     </div>
-  );
-};
+  )
+}

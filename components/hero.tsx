@@ -71,7 +71,7 @@ export const Hero = () => {
         >
           <Card rotate={rotate} translate={translate} scale={scale}>
             <Image
-              src={`/dashboard.png`}
+              src={`/LogicProTemp.webp`}
               alt="hero"
               height={720}
               width={1400}

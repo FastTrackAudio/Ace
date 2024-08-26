@@ -1,15 +1,15 @@
-"use client";
-import React from "react";
-import { TestimonialsSlider } from "./slider";
-import { FeatureIconContainer } from "../features/feature-icon-container";
-import { Heading } from "../heading";
-import { Subheading } from "../subheading";
-import { TbLocationBolt } from "react-icons/tb";
-import { cn } from "@/lib/utils";
-import { testimonials } from "@/constants/page-testimonials";
-import Image from "next/image";
-import { TestimonialsGrid } from "./grid";
-import { AmbientColor } from "../ambient-color";
+"use client"
+import React from "react"
+import { TestimonialsSlider } from "./slider"
+import { FeatureIconContainer } from "../features/feature-icon-container"
+import { Heading } from "../heading"
+import { Subheading } from "../subheading"
+import { TbLocationBolt } from "react-icons/tb"
+import { cn } from "@/lib/utils"
+import { testimonials } from "@/constants/page-testimonials"
+import Image from "next/image"
+import { TestimonialsGrid } from "./grid"
+import { AmbientColor } from "../ambient-color"
 
 export const Testimonials = () => {
   return (
@@ -19,9 +19,10 @@ export const Testimonials = () => {
         <FeatureIconContainer className="flex justify-center items-center overflow-hidden">
           <TbLocationBolt className="h-6 w-6 text-cyan-500" />
         </FeatureIconContainer>
-        <Heading className="pt-4">Used by entreprenurs</Heading>
+        <Heading className="pt-4">Creatives Trust Creatives</Heading>
         <Subheading>
-          Proactiv is used by serial entrepreneurs and overachievers.
+          Being Musicians and Artists Ourselves, We Understand the Weight and
+          Importance of Your Project
         </Subheading>
       </div>
 
@@ -33,5 +34,5 @@ export const Testimonials = () => {
       </div>
       <div className="absolute bottom-0 inset-x-0 h-40 w-full bg-gradient-to-t from-charcoal to-transparent"></div>
     </div>
-  );
-};
+  )
+}

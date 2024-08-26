@@ -11,6 +11,7 @@ import { FeatureIconContainer } from "@/components/features/feature-icon-contain
 import { Heading } from "@/components/heading"
 import { Hero } from "@/components/hero"
 import { MusicCards } from "@/components/music-cards"
+import Portfolio from "@/components/portfolio"
 import { PricingGrid } from "@/components/pricing-grid"
 import { Subheading } from "@/components/subheading"
 import { Testimonials } from "@/components/testimonials"
@@ -27,7 +28,8 @@ export default function Home() {
 
       <Features />
 
-      <Tools />
+      <Portfolio />
+      {/* <Tools /> */}
       <Testimonials />
       <div className="py-20 sm:py-40">
         <FeatureIconContainer className="flex justify-center items-center overflow-hidden">

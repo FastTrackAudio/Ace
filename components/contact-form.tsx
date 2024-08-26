@@ -1,11 +1,11 @@
-import React from "react";
-import { Container } from "./container";
-import { Heading } from "./heading";
-import { Subheading } from "./subheading";
-import { Button } from "./button";
-import { Grid } from "./features/grid";
-import { FeatureIconContainer } from "./features/feature-icon-container";
-import { IconMailFilled } from "@tabler/icons-react";
+import React from "react"
+import { Container } from "./container"
+import { Heading } from "./heading"
+import { Subheading } from "./subheading"
+import { Button } from "./button"
+import { Grid } from "./features/grid"
+import { FeatureIconContainer } from "./features/feature-icon-container"
+import { IconMailFilled } from "@tabler/icons-react"
 
 export const ContactForm = () => {
   return (
@@ -18,8 +18,8 @@ export const ContactForm = () => {
         </div>
         <Heading className="text-left">Contact us</Heading>
         <Subheading className="text-left text-neutral-400">
-          We are always looking for ways to improve our products and services.
-          Contact us and let us know how we can help you.
+          We are always looking for ways to get deeper in the music community.
+          Reach out and let us know how we can be apart of your musical journey!
         </Subheading>
 
         <div className="text-sm mt-10">
@@ -47,7 +47,7 @@ export const ContactForm = () => {
           <input
             id="name"
             type="text"
-            placeholder="Manu Arora"
+            placeholder="John Mayer"
             className="h-10 pl-4 w-full rounded-md text-sm bg-charcoal border border-neutral-800 text-white placeholder-neutral-500 outline-none focus:outline-none active:outline-none focus:ring-2 focus:ring-neutral-800"
           />
         </div>
@@ -70,12 +70,12 @@ export const ContactForm = () => {
             className="text-neutral-300 text-sm font-medium mb-2 inline-block"
             htmlFor="company"
           >
-            Company
+            Subject
           </label>
           <input
             id="company"
             type="text"
-            placeholder="contact@aceternity.com"
+            placeholder="My Upcoming Album!"
             className="h-10 pl-4 w-full rounded-md text-sm bg-charcoal border border-neutral-800 text-white placeholder-neutral-500 outline-none focus:outline-none active:outline-none focus:ring-2 focus:ring-neutral-800"
           />
         </div>
@@ -96,5 +96,5 @@ export const ContactForm = () => {
         <Button variant="muted">Submit</Button>
       </div>
     </Container>
-  );
-};
+  )
+}
